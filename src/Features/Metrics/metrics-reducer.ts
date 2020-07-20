@@ -8,6 +8,22 @@ export type ApiErrorAction = {
   error: string;
 };
 
+export type MeasurementQuery = {
+  metricName: string;
+};
+
+export type MultipleMeasurements = {
+  metric: string;
+  measurements: Measurement[];
+};
+
+export type Measurement = {
+  metric: string;
+  at: number;
+  value: number;
+  unit: string;
+};
+
 const initialState = {
   getMetrics: '',
 };
